@@ -8,10 +8,11 @@ import java.net.Socket;
 /**
  * @author wenda.zhuang
  * @Date 2019/8/19 18:23
- * @Description ... E-mail   sis.nonacosa@gmail.com
+ * @Description ...
+ * @E-mail sis.nonacosa@gmail.com
  */
 public class IOServer {
-	public static void run () throws IOException {
+	public static void run() throws IOException {
 		ServerSocket serverSocket = new ServerSocket(8000);
 
 		new Thread(() -> {
@@ -20,7 +21,7 @@ public class IOServer {
 					// 阻塞方法 「获取新的链接」
 					Socket socket = serverSocket.accept();
 
-					new Thread( () -> {
+					new Thread(() -> {
 						int len;
 						byte[] data = new byte[1024];
 						try {
